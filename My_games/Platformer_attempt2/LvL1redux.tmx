@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="200" height="30" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Cave_level" tilewidth="32" tileheight="32">
+  <image source="../Tilesets/mylevel1_tiles.png" width="256" height="768"/>
+ </tileset>
+ <tileset firstgid="193" name="triggers" tilewidth="32" tileheight="32">
+  <image source="../../tmx-master/examples/triggers.png" width="192" height="32"/>
+  <tile id="0">
+   <properties>
+    <property name="player" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="reverse" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="199" name="triggers" tilewidth="32" tileheight="32">
+  <image source="triggers.png" width="192" height="32"/>
+  <tile id="4">
+   <properties>
+    <property name="skeleton" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="205" name="coin" tilewidth="32" tileheight="32">
+  <tileoffset x="1" y="0"/>
+  <image source="coin.png" width="34" height="32"/>
+ </tileset>
+ <tileset firstgid="206" name="power" tilewidth="32" tileheight="32">
+  <image source="power.png" trans="ffffff" width="37" height="34"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="200" height="30" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztWrGS1DAMzV9Q8m1AxdHRHVRw1UEFVEAFVHupdrfay8+RG6LhnXhyJCXeZCfcjCZeyU+RLVmWneuaprnvqVPEeGPyMcyUPpeCuyRbMz720H2F9y6FaXs6DfxdT3cDz2rfJTDRdlb3krhLstXr46z8NPG9a8Icwb/7ng4Dz2ofEphoO6t7Sdwl2er1cVa+m/jeNWE68K+sp67Qvk9gou2s7iVxl2Sr18dZ+X7ie9eEkX3mgaJ7kxeTqQUyupfEXZKt566vasZWbQzuKZm9t0Z9NVX3ErhLsrV2fTXXe9eAwb0G++p9aI08xn/47dlj1zaWJXhz66+l18MT32bqxxJG95FnewE8xvfO59rGsgRvTl219Hp5Xr9fD/TGiZHa+bmiI5Gtjcf43vlc21iW4M2tq4ZeL8/r93cDvXdipHa+UtQR2dp4jO+dz7WNZQne3Lpq6PXyvH6/HeiDEyM11mtFLZGtjcf43vlc21iW4M2tq4ZeL8/rdzx/ejDRO8LMvWILdqFM7giwhmzBdmzLXod40aHxXn+iTdoOochYvfNxr3QjiS1iD7MT71KEdob9WX9F5PLeqXEyFeP1ewRj3Wux9s7ZT2Na9Vts03cEEt/SPg7tXfPvusDf2B9jTa8dFnMYi9Y5b867azaWIxDaiCQYtB/l1prK2BeVy5imxskaMWN3YSy+ohiMYYxfrY/lWJ0z9bkc11rXPI610n0d/tb8yPgy81FaLzq/acI17xlLxr6oXMY0NU7WiDl3fSU5Xvys9w69PlhO1OusVTKsyXTdxeq8c7ZxP2DrAGUl8sxJ1r5MfXVqpsfJGjEYTyzGNO0TmKPqx3I75v1Szj8ahLX4geiZs0aao61txZyxdxDbQ3DfZPf6Xn9lSM9zJE6ytpa+XcwVw9H1l8XoXMfOkkxW6qcxpdqipHeJNlv3ehxjpNeHUEvkEX9l5Cyned6VtZXhauwhLLextSl97gyM1Wa6rps/3y/l+RZsztYrW8e/hflk9/qRPS4jx/cxn1u6srZa3y4847t29rPOKmxtSp+DgbHaTJd8v5TnDcxhtl7ZOv4G5rMDXVfN43t/j+8ycnwf83lpX8/YynAeDKvJShiWl9jaxLvUSI5jum6bP98v5flR2VuqKy3e1vEfh/lkfV8H/DWlvjoN72I+H6uvBOu1leFq1GTW+cRa03cFjCadb8Rfn3r6DM8vTXm/8fC2jv8yzCfrG/VXRK59W/rfHa/ejK0eDFu3Yxjv2syc806Gv7729A2e35vy/8x4eVvGfx/mk/WN+KtUHzA5+tbau8Zyeza2ohi2bscwke+OO0c/jWH++tHTT3j+aub5H7Ut438N88n6Rn0ckaNvWS6sGVtRDMv7Y5iuebwPW22Z88g5b2/4S9YnrlPMM6yu9PC2jC/t/VEfR+ToW5YLa8bWOTDRe8RsfYX+kvWp80Fmf5Uz0dbxVg6M6jw55FYdVcqFNWLrHJjMPWQUo9clOz9G9GGeknFsHW/lQE/9wO7GWA6TdmvgdN2g5TViqzbGu89I29PPutd40dMzox2xAfOUjGPreL1WrNhk9YPOVzp3MX0Mh8+SfEps1cJYeeK6+fsNm7W9PGxb57R2aD/su696egntTH0htYDOpVvEs3Moi03tL+tbBd59MX0WTn4zuY4TKyaX4OmaVZ74DZu1vTxsW+c0WR/sL1pfYF7UuXSL+CdA1t3xc+IvdmbA9tHQZ+HkN5PrOGHrbikejhHlt83fb9is7eVhm81NN9hgrY9ofYHjO/3HN0+B2PwLaX+x+xNsd4Y+Cye/mVzHyZRvRXPzcIwo/w057Lc/
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="200" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztm8lu3DAMhnVu0hbIJD00TQ9JJqe2h25v0vd/lVLACGAYcZEsy7LMDyAgYzSGTIvir8UhOI7jOI7jOI7jOM4++An2C+w32B+wvxu04R3YFdg12AdDnffGsuPMwA3YLdgd2CehzgnVs5QdZwY+g30BewD7KtS5R/UsZceZgUewZ7Az2ItQ5wnV8/zh1DLCnAKjzS9q9JXnD2cWtP5fo69wLuHKzrjUrLdwaze5e2p1R0Lr/66vjkfNegunLXL35MbZEdH6f3wuLX+4vpqLmvUWrc/He95d6reIj5bzFCm3WfSVlj9cX80F1QOWstbn4z0fLvVHyx94fKcxYNFXWg51fTUWS8fWGn3FjZ34nucwpr7C4ztt21H0Fc6hLeabM1Ojr7T5R7znN7DvYD9WaXU9eHynMXAUfYVjODcGnkLZfLMFo631J9bSVxbW8MmSPYyj6Cscw7kx8P5inA49EpK+4t6zRV9thTS/iEgx0EJf7eF8CY7h3Bj4dDHcRk1n/VuxvRw9co70PjkdbdFXWyHNLyJSDLTQVzX5uDeavkpl3MZWa5F7Q3qfXKxofsL5o7dPpflFZIm+muX8rqavaFnyZwl4vB9lfqFh1VfYXyV+6q1d19RXs5zflfQVfv/Pof88fTSs+qrWT73zh0Vfcc+h5Yea8yV701f4/d+Sa9dXfM6o9dPSnFyKRV9xz+H66u2cg+YT637Jx25Psy5WfYXLlvUr61y+NRZ9xT3HUfSVlD9oPOB2WuN9pjxj0Ven8Np3lvUr615Ja1xf6Uj5Q8on1njvrRk4Wqz/Wvaz0l6R9Uxuumf8n+ur8fRV8hFug6QZWu8fL6H3PrvlvFDq6+naev4q/s/1lV4u/f6Glq9Cmf5PPsJtyLVLimuqxUr2jymjni2J0PiQxod0bfn+I9XfUl9xGmmJvio9X2IpW/MN7pP4t9L1xeQj3IZcu6S4pvGFyynm9/iNHIWOd8nP+B2cw2vfWb7/2GrNXPs2a6m+Kj2/W9L3c7/RtdfcvKF0fRHHcO7/lnOVNL5orOHynvdN6HiX/ITfAfWBlj8fw3Zr5jjeOY20RF+Vnt+1lP8DYCGXXA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="200" height="30" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzt19sKgCAMAFAZ0v9/cq8xwi6YFp0DA+dg+rAHLQUAAAAAAAAAAACeEQc5AABANvPfECn2agAAAAD0UQedEyfWMFrdRN5v5bzDMvsCAD/k7cYVrXm5M0u9+wEAAN+xAipRAEE=
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="200" height="30" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7A9+LeMjJHQKmgCAAAAAAAAAAAAAAAAAAAAAAAAAHDftAMAAMALC5wsAAY=
+  </data>
+ </layer>
+ <objectgroup name="triggers" width="200" height="30">
+  <properties>
+   <property name="platform" value=""/>
+  </properties>
+  <object x="1" y="866" width="670" height="97">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="897" y="482" width="413" height="479">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="1311" y="738" width="384" height="226">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="1695" y="895" width="133" height="66">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="1855" y="642" width="131" height="30">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="2078" y="514" width="161" height="32">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="2497" y="577" width="155" height="32">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="2050" y="865" width="161" height="30">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="2785" y="450" width="157" height="30">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="2403" y="833" width="154" height="31">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="2748" y="800" width="160" height="30">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="4287" y="256" width="158" height="32">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="3297" y="319" width="445" height="654">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object gid="193" x="3173" y="719"/>
+  <object gid="194" x="1115" y="482"/>
+  <object gid="194" x="1394" y="738"/>
+  <object gid="194" x="1633" y="738"/>
+  <object gid="194" x="1540" y="737"/>
+  <object gid="194" x="2563" y="569"/>
+  <object gid="194" x="2454" y="835"/>
+  <object gid="194" x="2810" y="444"/>
+  <object gid="194" x="3514" y="312"/>
+  <object gid="194" x="3556" y="312"/>
+  <object gid="194" x="3595" y="315"/>
+  <object gid="194" x="3634" y="315"/>
+  <object gid="194" x="3991" y="314"/>
+  <object gid="194" x="4045" y="316"/>
+  <object gid="196" x="3268" y="321"/>
+  <object gid="196" x="3741" y="320"/>
+  <object gid="196" x="2940" y="451"/>
+  <object gid="196" x="2756" y="452"/>
+  <object gid="196" x="2557" y="836"/>
+  <object gid="196" x="2367" y="835"/>
+  <object gid="196" x="2652" y="581"/>
+  <object gid="196" x="2466" y="579"/>
+  <object gid="196" x="581" y="866"/>
+  <object gid="194" x="282" y="864"/>
+  <object gid="194" x="481" y="866"/>
+  <object gid="196" x="226" y="866"/>
+  <object gid="196" x="1304" y="482"/>
+  <object gid="196" x="1695" y="739"/>
+  <object x="798" y="577" width="96" height="32">
+   <properties>
+    <property name="platform" value="t"/>
+   </properties>
+  </object>
+  <object x="673" y="673" width="94" height="30">
+   <properties>
+    <property name="platform" value="t"/>
+   </properties>
+  </object>
+  <object x="801" y="800" width="94" height="32">
+   <properties>
+    <property name="platform" value="t"/>
+   </properties>
+  </object>
+  <object gid="196" x="3940" y="323"/>
+  <object gid="196" x="4095" y="322"/>
+  <object x="4288" y="512" width="159" height="29">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="4608" y="383" width="159" height="34">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="4645" y="129" width="152" height="32">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="4962" y="513" width="126" height="355">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="3967" y="321" width="127" height="175">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="5218" y="384" width="123" height="464">
+   <properties>
+    <property name="platform" value="tblr"/>
+   </properties>
+  </object>
+  <object x="5440" y="257" width="127" height="588">
+   <properties>
+    <property name="platform" value="tlbr"/>
+   </properties>
+  </object>
+  <object x="5696" y="130" width="126" height="565">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="5985" y="128" width="427" height="734">
+   <properties>
+    <property name="platform" value="tlbr"/>
+   </properties>
+  </object>
+  <object gid="196" x="873" y="481">
+   <properties>
+    <property name="reverse" value=""/>
+   </properties>
+  </object>
+  <object gid="194" x="1042" y="481"/>
+  <object x="1311" y="577" width="64" height="194">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object gid="194" x="417" y="705"/>
+  <object gid="196" x="1344" y="735">
+   <properties>
+    <property name="reverse" value=""/>
+   </properties>
+  </object>
+  <object gid="203" x="1183" y="439">
+   <properties>
+    <property name="skeleton" value=""/>
+   </properties>
+  </object>
+  <object gid="203" x="1477" y="683">
+   <properties>
+    <property name="skeleton" value=""/>
+   </properties>
+  </object>
+  <object gid="203" x="3473" y="274">
+   <properties>
+    <property name="skeleton" value=""/>
+   </properties>
+  </object>
+  <object gid="203" x="4678" y="329">
+   <properties>
+    <property name="skeleton" value=""/>
+   </properties>
+  </object>
+  <object gid="202" x="4579" y="385"/>
+  <object gid="202" x="4768" y="384"/>
+  <object gid="200" x="5248" y="384"/>
+  <object gid="203" x="5294" y="341">
+   <properties>
+    <property name="skeletons" value=""/>
+   </properties>
+  </object>
+  <object gid="202" x="5340" y="388"/>
+  <object gid="202" x="5187" y="381"/>
+  <object gid="205" x="668" y="594">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="993" y="389">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="1212" y="392">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="1638" y="643">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="2746" y="731">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="2868" y="729">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="3166" y="610">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="2504" y="484">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="2602" y="482">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="3638" y="241">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="3694" y="241">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="4006" y="586">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="4023" y="244">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="4667" y="106">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="4753" y="102">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="4283" y="463">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="4412" y="460">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="5447" y="182">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="5533" y="182">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="5750" y="53">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="310" y="783">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="205" x="458" y="785">
+   <properties>
+    <property name="coin" value=""/>
+   </properties>
+  </object>
+  <object gid="202" x="3136" y="831">
+   <properties>
+    <property name="mov_plat" value=""/>
+   </properties>
+  </object>
+  <object x="3969" y="736" width="103" height="223">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object gid="206" x="4009" y="729"/>
+  <object x="4065" y="631" width="30" height="328">
+   <properties>
+    <property name="platform" value="lr"/>
+   </properties>
+  </object>
+  <object x="3967" y="326" width="31" height="313">
+   <properties>
+    <property name="platform" value="tlrb"/>
+   </properties>
+  </object>
+  <object x="3990" y="609" width="105" height="22">
+   <properties>
+    <property name="platform" value="t"/>
+   </properties>
+  </object>
+  <object x="3983" y="498" width="112" height="15">
+   <properties>
+    <property name="platform" value="r"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
